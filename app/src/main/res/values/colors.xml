@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1C1065</color>
+    <color name="colorPrimaryDark">#13094B</color>
+    <color name="colorAccent">#FFBF12</color>
+    <color name="bgcolor">#FAFBFF</color>
+    <color name="biru_tua">#13094B</color>
+    <color name="biru_muda">#1C1065</color>
+    <color name="t_grey">#9BA6C8</color>
+    <color name="t_dark">#1C1E27</color>
+    <color name="white">#ffffff</color>
+    <color name="transparent">#00FFFFFF</color>
+
+    <color name="c1a">#78377E</color>
+    <color name="c2a">#B23A44</color>
+    <color name="c3a">#B79762</color>
+    <color name="c4a">#52725A</color>
+    <color name="c5a">#0C78CE</color>
+    <color name="c1b">#EBDBEE</color>
+    <color name="c2b">#F9DDE0</color>
+    <color name="c3b">#FAE9D7</color>
+    <color name="c4b">#CCD8D6</color>
+    <color name="c5b">#D5E5F4</color>
+
+    <color name="gradient1">#2F248F</color>
+    <color name="gradient2">#291E82</color>
+</resources>
