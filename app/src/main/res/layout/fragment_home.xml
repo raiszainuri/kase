@@ -6,144 +6,154 @@
     android:background="@color/bgcolor"
     tools:context=".ui.fragment.HistoryFragment">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:id="@+id/sv">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:gravity="center"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginRight="25dp"
-                android:background="@drawable/bg_view_card_home_top"
-                android:gravity="center_horizontal"
-                android:orientation="vertical"
-                android:padding="20dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Tersedia"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/f_bold"
-                    android:text="Rp 260.000,-"
-                    android:textColor="@color/white"
-                    android:textSize="28sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="di dalam kas saat ini"
-                    android:textColor="@color/white"
-                    android:textSize="14sp" />
-
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            android:background="@drawable/bg_view_card_home_bottom"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-
-                android:gravity="center_horizontal|center_vertical"
-                android:orientation="horizontal"
-
-                android:padding="20dp">
-
-                <RelativeLayout
-                    android:layout_marginRight="12dp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp">
-
-                    <ProgressBar
-                        android:id="@+id/progressBar"
-                        style="?android:attr/progressBarStyleHorizontal"
-                        android:layout_width="200dp"
-                        android:layout_height="200dp"
-                        android:background="@drawable/circle_shape"
-                        android:indeterminate="false"
-                        android:max="100"
-                        android:progress="0"
-                        android:progressDrawable="@drawable/circular_progress_bar" />
-                    <TextView
-                        android:id="@+id/tv_progress_bar"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="70%"
-                        android:paddingBottom="3dp"
-                        android:textSize="12sp"
-                        android:fontFamily="@font/f_semibold"
-                        android:layout_centerInParent="true"/>
-                </RelativeLayout>
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@drawable/bg_view_card_home_top"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="20dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/f_semibold"
-                        android:text="Laporan cepat bulan Oktober"
-                        android:textColor="@color/t_dark" />
+                        android:text="Tersedia"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/f_regular"
-                        android:text="Cek lebih lengkap di halaman laporan"
-                        android:textColor="@color/t_grey"
-                        android:textSize="13sp" />
+                        android:fontFamily="@font/f_bold"
+                        android:text="Rp 260.000,-"
+                        android:textColor="@color/white"
+                        android:textSize="28sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="di dalam kas saat ini"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
                 </LinearLayout>
-
-
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/bg_view_card_home_bottom"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal"
+
+                    android:padding="20dp">
+
+                    <RelativeLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="12dp">
+
+                        <ProgressBar
+                            android:id="@+id/progressBar"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:background="@drawable/circle_shape"
+                            android:indeterminate="false"
+                            android:max="100"
+                            android:progress="0"
+                            android:progressDrawable="@drawable/circular_progress_bar" />
+
+                        <TextView
+                            android:id="@+id/tv_progress_bar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/f_semibold"
+                            android:paddingBottom="3dp"
+                            android:text="70%"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/f_semibold"
+                            android:text="Laporan cepat bulan Oktober"
+                            android:textColor="@color/t_dark" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/f_regular"
+                            android:text="Cek lebih lengkap di halaman laporan"
+                            android:textColor="@color/t_grey"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="25dp"
+                android:fontFamily="@font/f_bold"
+                android:text="Aktivitas Terbaru"
+                android:textColor="@color/t_dark"
+                android:textSize="17sp" />
+
+            <com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView
+                android:id="@+id/lvcatatan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="25dp"
+                android:divider="@color/transparent"
+                android:dividerHeight="10dp" />
+
+
         </LinearLayout>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="25dp"
-            android:fontFamily="@font/f_bold"
-            android:text="Aktivitas Terbaru"
-            android:textColor="@color/t_dark"
-            android:textSize="17sp" />
-
-        <ListView
-            android:id="@+id/lvcatatan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="7dp"
-            android:layout_marginRight="25dp" />
-
-
-    </LinearLayout>
+    </ScrollView>
 
 </FrameLayout>

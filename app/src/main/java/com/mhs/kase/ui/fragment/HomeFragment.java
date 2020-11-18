@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.view.animation.TranslateAnimation;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
@@ -22,13 +23,14 @@ import java.util.List;
 
 public class HomeFragment extends Fragment {
 
-    private ProgressBar progressBar;
-    private TextView tv_progress_bar;
-    private View view;
     private Context ctx;
-    private int awal = 0, akhir = 70;
+
+    private View view;
+    private ScrollView sv;
+    private ProgressBar progressBar;
     private TextView tvProgressBar;
-    private ListView lvcatatan;
+    private TextView tv_progress_bar;
+    private com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView lvcatatan;
 
     private CatatanAdapter adapter;
     private List<CatatanModel> listModel = new ArrayList<>();
@@ -46,29 +48,36 @@ public class HomeFragment extends Fragment {
         ctx = getActivity();
         initView();
 
+        adapter = new CatatanAdapter(getActivity(), listModel);
+        adapter.notifyDataSetChanged();
+
         final ProgressBarAnimation anim = new ProgressBarAnimation(progressBar, 0, 70);
         anim.setDuration(2000);
         progressBar.startAnimation(anim);
 
-        adapter = new CatatanAdapter(getActivity(),listModel);
-        adapter.notifyDataSetChanged();
+        initData();
 
-        int[] oke = {1,2,3,4,5,1,2,3,4,5};
-        for (int i = 0; i < 10; i++){
+        return view;
+    }
+
+    private void initView() {
+        sv = view.findViewById(R.id.sv);
+        lvcatatan =  view.findViewById(R.id.lvcatatan);
+        lvcatatan.setExpanded(true);
+        progressBar =  view.findViewById(R.id.progressBar);
+        tvProgressBar =  view.findViewById(R.id.tv_progress_bar);
+        tv_progress_bar =  view.findViewById(R.id.tv_progress_bar);
+    }
+
+    private void initData(){
+        int[] oke = {1, 2, 3, 4, 5, 1, 2, 3, 4, 5};
+        for (int i = 0; i < 10; i++) {
             CatatanModel model = new CatatanModel();
             model.setIdcolor(oke[i]);
             listModel.add(model);
         }
 
         lvcatatan.setAdapter(adapter);
-
-        return view;
-    }
-
-    private void initView() {
-        progressBar = (ProgressBar) view.findViewById(R.id.progressBar);
-        tv_progress_bar = (TextView) view.findViewById(R.id.tv_progress_bar);
-        tvProgressBar = (TextView) view.findViewById(R.id.tv_progress_bar);
-        lvcatatan = (ListView) view.findViewById(R.id.lvcatatan);
+        sv.fullScroll(View.FOCUS_UP);
     }
 }

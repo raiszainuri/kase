@@ -47,7 +47,7 @@
             android:textColor="@color/t_dark"
             android:textSize="17sp" />
 
-        <ListView
+        <ExpandableListView
             android:layout_marginTop="7dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
