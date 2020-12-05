@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bgcolor"
+    tools:context=".ui.MemberDetailActivity">
+
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/iv_profile"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_acc_circle"
+                    android:tint="@color/c1a" />
+
+                <View
+                    android:id="@+id/iv_placeholder"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_user_border"
+                    android:backgroundTint="@color/c1b" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_nama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="14dp"
+                android:fontFamily="@font/f_bold"
+                android:text="Ikbal Ros Prayoga"
+                android:textColor="@color/t_dark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/f_regular"
+                android:text="username"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/btn_hubungi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_btn_hubungi"
+                android:fontFamily="@font/f_bold"
+                android:paddingLeft="30dp"
+                android:paddingTop="5dp"
+                android:paddingRight="30dp"
+                android:paddingBottom="8dp"
+                android:text="Hubungi Saya"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="25dp"
+                android:fontFamily="@font/f_bold"
+                android:text="Semua Aktivitas"
+                android:textColor="@color/t_dark"
+                android:textSize="17sp" />
+
+            <com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView
+                android:id="@+id/lv_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="10dp"
+                android:divider="@color/bgcolor"
+                android:dividerHeight="10dp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

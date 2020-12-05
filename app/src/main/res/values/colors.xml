@@ -3,6 +3,8 @@
     <color name="colorPrimary">#1C1065</color>
     <color name="colorPrimaryDark">#13094B</color>
     <color name="colorAccent">#FFBF12</color>
+    <color name="progressbar">#F2994a</color>
+
     <color name="bgcolor">#F4F7FF</color>
     <color name="biru_tua">#13094B</color>
     <color name="biru_muda">#1C1065</color>
@@ -10,6 +12,7 @@
     <color name="t_dark">#1C1E27</color>
     <color name="white">#ffffff</color>
     <color name="transparent">#00FFFFFF</color>
+    <color name="biru_link">#5498FF</color>
 
     <color name="c1a">#78377E</color>
     <color name="c2a">#B23A44</color>

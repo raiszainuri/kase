@@ -46,8 +46,8 @@
                 android:paddingRight="22dp">
 
                 <ImageView
-                    android:layout_width="18dp"
-                    android:layout_height="18dp"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="5dp"
                     android:src="@drawable/ic_user_solid"
@@ -79,11 +79,11 @@
                 android:paddingRight="22dp">
 
                 <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="5dp"
-                    android:src="@drawable/ic_user_solid"
+                    android:src="@drawable/ic_lock"
                     android:tint="@color/t_grey" />
 
                 <EditText

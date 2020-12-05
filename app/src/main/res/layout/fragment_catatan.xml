@@ -5,56 +5,66 @@
     android:layout_height="match_parent"
     android:background="@color/bgcolor"
     tools:context=".ui.fragment.HistoryFragment">
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
+        android:id="@+id/sv">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="25dp"
-            android:background="@drawable/bg_btn_accent"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
-                android:src="@drawable/ic_user_solid"
-                android:tint="@color/t_dark" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/bg_btn_accent"
+                android:gravity="center"
+                android:id="@+id/btn_filter"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/ic_setting"
+                    android:tint="@color/t_dark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/f_medium"
+                    android:textSize="14sp"
+                    android:text="Filter Aktivitas"
+                    android:textColor="@color/t_dark" />
+            </LinearLayout>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/f_semibold"
-                android:text="Filter Aktivitas"
-                android:textColor="@color/t_dark" />
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="25dp"
+                android:fontFamily="@font/f_bold"
+                android:text="Semua Aktivitas"
+                android:textColor="@color/t_dark"
+                android:textSize="17sp" />
+
+            <com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView
+                android:id="@+id/lv_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="25dp"
+                android:divider="@color/transparent"
+                android:dividerHeight="10dp" />
+
+
         </LinearLayout>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="25dp"
-            android:fontFamily="@font/f_bold"
-            android:text="Aktivitas Terbaru"
-            android:textColor="@color/t_dark"
-            android:textSize="17sp" />
-
-        <ExpandableListView
-            android:layout_marginTop="7dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp" />
-
-
-    </LinearLayout>
+    </ScrollView>
 
 </FrameLayout>

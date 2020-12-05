@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.MemberDetailActivity">
+
+    <ImageView
+        android:id="@+id/iv_profile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_acc_circle"
+        android:tint="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/tv_nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/f_bold"
+        android:text="Nama Contoh Orang"
+        android:textColor="@color/t_dark"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/f_regular"
+        android:text="username"
+        android:textSize="13sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="25dp"
+        android:fontFamily="@font/f_bold"
+        android:text="Pengaturan"
+        android:textColor="@color/t_dark"
+        android:textSize="17sp" />
+
+    <com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView
+        android:id="@+id/lv_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="25dp" />
+</LinearLayout>

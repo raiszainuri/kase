@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor"
+    android:orientation="vertical"
+    tools:context=".ui.TambahCatatanActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="25dp"
+        android:fontFamily="@font/f_bold"
+        android:text="Tambah Data"
+        android:textColor="@color/t_dark"
+        android:textSize="17sp" />
+
+
+    <LinearLayout
+        android:layout_marginTop="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_input_border"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingTop="15dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="15dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_user_solid" />
+
+            <TextView
+                android:text="Nama Orang"
+                android:paddingLeft="10dp"
+                android:fontFamily="@font/f_bold"
+                android:textColor="@color/t_grey"
+                android:background="@color/transparent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_input_border"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingTop="15dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="15dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_info" />
+
+            <EditText
+                android:hint="@string/tx_username"
+                android:textColorHint="@color/t_grey"
+                android:paddingLeft="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/t_grey"
+                android:fontFamily="@font/f_bold"
+                android:background="@color/transparent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_input_border"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingTop="15dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="15dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_calendar" />
+
+            <EditText
+                android:text="2000"
+                android:paddingLeft="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/t_grey"
+                android:fontFamily="@font/f_bold"
+                android:background="@color/transparent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_btn_accent"
+            android:gravity="center"
+            android:id="@+id/btn_tambah"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/ic_plus"
+                android:tint="@color/t_dark" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/f_medium"
+                android:textSize="14sp"
+                android:text="Tambah"
+                android:textColor="@color/t_dark" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -16,4 +16,7 @@
     <string name="tx_sudah_punya_akun">Sudah punya akun?</string>
     <string name="tx_masuk_disini">Masuk disini</string>
     <string name="tx_semua_member">Semua Member</string>
+    <string name="tx_tambah_data">Tambah Data</string>
+    <string name="tx_keterangan">Keterangan</string>
+    <string name="tx_filter_aktivitas">Filter Aktivitas</string>
 </resources>

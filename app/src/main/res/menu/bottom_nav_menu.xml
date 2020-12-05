@@ -8,16 +8,16 @@
     <item
         android:id="@+id/page_2"
         android:enabled="true"
-        android:icon="@drawable/ic_chart_line_solid"
+        android:icon="@drawable/ic_chart"
         android:title="Graph"/>
     <item
         android:id="@+id/page_3"
         android:enabled="true"
-        android:icon="@drawable/ic_wallet_solid"
+        android:icon="@drawable/ic_wallet"
         android:title="Wallet"/>
     <item
         android:id="@+id/page_4"
         android:enabled="true"
-        android:icon="@drawable/ic_acc_2"
+        android:icon="@drawable/ic_user_solid"
         android:title="Profile"/>
 </menu>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_view_card_round_white">
+    <LinearLayout
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/bg_view_card_round_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="6dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <View
+                android:id="@+id/v1"
+                android:layout_width="47dp"
+                android:layout_height="47dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:background="@drawable/bg_acc_circle"/>
+            <View
+                android:id="@+id/v2"
+                android:layout_centerInParent="true"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:backgroundTint="@color/white"
+                android:background="@drawable/ic_user_border"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="0.7"
+                android:orientation="vertical"
+                android:paddingTop="1dp">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:fontFamily="@font/f_bold"
+                    android:text="Nama Lengkap"
+                    android:textColor="@color/t_dark" />
+
+                <TextView
+                    android:id="@+id/tv_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/f_regular"
+                    android:text="Nama ~ Kas Konsumsi"
+                    android:textColor="@color/t_grey"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

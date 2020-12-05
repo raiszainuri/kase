@@ -3,7 +3,6 @@ package com.mhs.kase.ui;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,9 +14,9 @@ import com.mhs.kase.R;
 import com.mhs.kase.ui.fragment.DompetFragment;
 import com.mhs.kase.ui.fragment.HistoryFragment;
 import com.mhs.kase.ui.fragment.HomeFragment;
-import com.mhs.kase.ui.fragment.ProfileFragment;
+import com.mhs.kase.ui.fragment.MemberFragment;
 
-public class MainActivity extends AppCompatActivity implements  BottomNavigationView.OnNavigationItemSelectedListener{
+public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
     private FrameLayout frameFragment;
     private BottomNavigationView bottomNavigation;
@@ -44,21 +43,23 @@ public class MainActivity extends AppCompatActivity implements  BottomNavigation
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         Fragment fragment = null;
-        switch (menuItem.getItemId()){
-            case R.id.page_1:
-                fragment = new HomeFragment();
-                break;
-            case R.id.page_2:
-                fragment = new HistoryFragment();
-                break;
-            case R.id.page_3:
-                fragment = new DompetFragment();
-                break;
-            case R.id.page_4:
-                fragment = new ProfileFragment();
-                break;
+        if  (menuItem.getItemId() == R.id.page_1) {
+            fragment = new HomeFragment();
+            tampilkanFragment(fragment);
+            return true;
+        }else if(menuItem.getItemId() == R.id.page_2){
+            fragment = new HistoryFragment();
+            tampilkanFragment(fragment);
+            return true;
+        }else if(menuItem.getItemId() == R.id.page_3){
+            fragment = new DompetFragment();
+            tampilkanFragment(fragment);
+            return true;
+        }else{
+            fragment = new MemberFragment();
+            tampilkanFragment(fragment);
+            return true;
         }
-        return tampilkanFragment(fragment);
     }
 
     private void initClick() {

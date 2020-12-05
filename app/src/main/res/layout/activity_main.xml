@@ -7,7 +7,14 @@
 
     android:background="@color/bgcolor"
     tools:context=".ui.MainActivity">
+    <LinearLayout
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"/>
     <FrameLayout
+        android:layout_below="@id/bar"
         android:id="@+id/frame_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
