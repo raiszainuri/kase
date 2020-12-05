@@ -45,7 +45,12 @@ public class RegisterActivity extends AppCompatActivity {
                 validasi();
             }
         });
-
+        tvLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     private void validasi() {

@@ -1,12 +1,16 @@
 <resources>
     <string name="app_name">kase</string>
     <string name="tx_password">Password</string>
+    <string name="tx_c_password">Konfirmasi Password</string>
     <string name="tx_username">Username</string>
     <string name="tx_masuk_untuk_mencatat">Masuk untuk mencatat</string>
     <string name="tx_masuk">Masuk</string>
     <string name="tx_lupa_password">Lupa password?</string>
     <string name="tx_belum_punya_akun">Belum punya akun? </string>
     <string name="tx_daftar_disini">Daftar disini</string>
+
+    <string name="tx_terbuka">Terbuka</string>
+    <string name="tx_tertutup">Tertutup</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -19,4 +23,5 @@
     <string name="tx_tambah_data">Tambah Data</string>
     <string name="tx_keterangan">Keterangan</string>
     <string name="tx_filter_aktivitas">Filter Aktivitas</string>
+    <string name="tx_daftar">Daftar</string>
 </resources>

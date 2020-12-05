@@ -194,7 +194,7 @@
                     android:background="@drawable/bg_transparent"
                     android:fontFamily="sans-serif"
                     android:gravity="center_vertical"
-                    android:hint="@string/tx_password"
+                    android:hint="@string/tx_c_password"
                     android:singleLine="true"
                     android:textColor="@color/t_dark"
                     android:textColorHint="@color/t_grey"
@@ -212,7 +212,7 @@
                 android:gravity="center"
                 android:paddingBottom="4dp"
                 android:shadowColor="@color/biru_tua"
-                android:text="@string/tx_masuk"
+                android:text="@string/tx_daftar"
                 android:textColor="@color/white"
                 android:textSize="16sp" />
         </LinearLayout>

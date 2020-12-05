@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/grp_1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_side_setting"
+            android:icon="@drawable/ic_gear"
+            android:title="Pengaturan" />
+    </group>
+    <group
+        android:id="@+id/grp_2"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_side_faq"
+            android:icon="@drawable/ic_question"
+            android:title="Kase FAQ" />
+        <item
+            android:id="@+id/nav_side_info"
+            android:icon="@drawable/ic_info"
+            android:title="Info Aplikasi" />
+    </group>
+    <group
+        android:id="@+id/grp_3"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_side_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="Keluar" />
+    </group>
+</menu>
