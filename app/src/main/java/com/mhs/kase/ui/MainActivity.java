@@ -1,5 +1,7 @@
 package com.mhs.kase.ui;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
@@ -94,7 +96,15 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 Toast.makeText(MainActivity.this, menuItem.getItemId() + "", Toast.LENGTH_SHORT).show();
-                return true;
+                if  (menuItem.getItemId() == R.id.nav_side_setting){
+                    startActivity(new Intent(MainActivity.this, SettingActivity.class));
+                    return true;
+                }else if(menuItem.getItemId() == R.id.nav_side_logout){
+                    startActivity(new Intent(MainActivity.this, SettingActivity.class));
+                    return true;
+                }else{
+                    return true;
+                }
             }
         });
     }

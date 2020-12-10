@@ -52,11 +52,13 @@ public class MemberFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_member, container, false);
         ctx = getActivity();
 
-        adapter = new MemberAdapter(ctx, listMember);
-        adapter.notifyDataSetChanged();
-
         initView();
+
+        adapter = new MemberAdapter(ctx, listMember);
+        lvMember.setAdapter(adapter);
+
         initData();
+        initClick();
 
         return view;
     }
@@ -65,8 +67,11 @@ public class MemberFragment extends Fragment {
         sv = (ScrollView) view.findViewById(R.id.sv);
         btnTambah = (LinearLayout) view.findViewById(R.id.btn_tambah);
         lvMember = (ExpandableHeightListView) view.findViewById(R.id.lv_member);
-        lvMember.setExpanded(true);
 
+        lvMember.setExpanded(true);
+    }
+
+    private void initClick(){
         lvMember.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -95,8 +100,6 @@ public class MemberFragment extends Fragment {
             model.setUsername("@username");
             listMember.add(model);
         }
-
-        lvMember.setAdapter(adapter);
-        sv.fullScroll(View.FOCUS_UP);
+        //adapter.notifyDataSetChanged();
     }
 }

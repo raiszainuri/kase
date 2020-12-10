@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bgcolor"
     android:orientation="vertical"
+    android:padding="25dp"
     tools:context=".ui.MemberDetailActivity">
 
     <ImageView
@@ -39,19 +40,160 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
         android:layout_marginTop="40dp"
-        android:layout_marginRight="25dp"
         android:fontFamily="@font/f_bold"
-        android:text="Pengaturan"
+        android:text="@string/tx_pengaturan"
         android:textColor="@color/t_dark"
         android:textSize="17sp" />
 
-    <com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView
-        android:id="@+id/lv_list"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
         android:layout_marginTop="7dp"
-        android:layout_marginRight="25dp" />
+        android:background="@drawable/bg_view_card_round_white"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:padding="14dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:orientation="vertical"
+            android:paddingTop="1dp">
+
+            <TextView
+                android:id="@+id/tv_name_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:fontFamily="@font/f_bold"
+                android:text="Biaya kas 1 pekan"
+                android:textColor="@color/t_dark" />
+
+            <TextView
+                android:id="@+id/tv_setting_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/f_regular"
+                android:text="Rp. 100000,-"
+                android:textColor="@color/t_grey"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:gravity="end|center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/f_semibold"
+                android:text="@string/tx_ubah"
+                android:textColor="@color/biru_link" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_view_card_round_white"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:padding="14dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:orientation="vertical"
+            android:paddingTop="1dp">
+
+            <TextView
+                android:id="@+id/tv_name_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:fontFamily="@font/f_bold"
+                android:text="Nama Organisasi"
+                android:textColor="@color/t_dark" />
+
+            <TextView
+                android:id="@+id/tv_setting_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/f_regular"
+                android:text="Computer Club"
+                android:textColor="@color/t_grey"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:gravity="end|center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/f_semibold"
+                android:text="@string/tx_ubah"
+                android:textColor="@color/biru_link" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_view_card_round_white"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:padding="14dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:orientation="vertical"
+            android:paddingTop="1dp">
+
+            <TextView
+                android:id="@+id/tv_name_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:fontFamily="@font/f_bold"
+                android:text="Asal Organisasi"
+                android:textColor="@color/t_dark" />
+
+            <TextView
+                android:id="@+id/tv_setting_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/f_regular"
+                android:text="Kampus STMIK Tasikmalaya"
+                android:textColor="@color/t_grey"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:gravity="end|center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/f_semibold"
+                android:text="@string/tx_ubah"
+                android:textColor="@color/biru_link" />
+        </LinearLayout>
+    </LinearLayout>
+
 </LinearLayout>

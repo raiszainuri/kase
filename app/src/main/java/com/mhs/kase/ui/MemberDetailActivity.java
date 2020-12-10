@@ -40,8 +40,9 @@ public class MemberDetailActivity extends AppCompatActivity {
         name = this.getIntent().getStringExtra("i_name");
 
         initView();
+
         adapter = new CatatanAdapter(this, listModel);
-        adapter.notifyDataSetChanged();
+        lvList.setAdapter(adapter);
 
         initData();
 
@@ -57,6 +58,7 @@ public class MemberDetailActivity extends AppCompatActivity {
         tvUsername = (TextView) findViewById(R.id.tv_username);
         btnHubungi = (TextView) findViewById(R.id.btn_hubungi);
         lvList = (ExpandableHeightListView) findViewById(R.id.lv_list);
+
         lvList.setExpanded(true);
     }
 
@@ -67,8 +69,6 @@ public class MemberDetailActivity extends AppCompatActivity {
             model.setIdcolor(oke[i]);
             listModel.add(model);
         }
-
-        lvList.setAdapter(adapter);
-        sv.fullScroll(View.FOCUS_UP);
+        //adapter.notifyDataSetChanged();
     }
 }

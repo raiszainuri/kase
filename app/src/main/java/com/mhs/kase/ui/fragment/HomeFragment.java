@@ -6,9 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.TranslateAnimation;
 import android.widget.AdapterView;
-import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -48,14 +46,15 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_home, container, false);
         ctx = getActivity();
-        initView();
 
-        adapter = new CatatanAdapter(getActivity(), listModel);
-        adapter.notifyDataSetChanged();
+        initView();
 
         final ProgressBarAnimation anim = new ProgressBarAnimation(progressBar, 0, 70);
         anim.setDuration(2000);
         progressBar.startAnimation(anim);
+
+        adapter = new CatatanAdapter(getActivity(), listModel);
+        lvcatatan.setAdapter(adapter);
 
         initData();
         initClick();
@@ -65,13 +64,14 @@ public class HomeFragment extends Fragment {
 
     private void initView() {
         sv = view.findViewById(R.id.sv);
-        lvcatatan =  view.findViewById(R.id.lvcatatan);
+        lvcatatan = view.findViewById(R.id.lvcatatan);
+        progressBar = view.findViewById(R.id.progressBar);
+        tvProgressBar = view.findViewById(R.id.tv_progress_bar);
+
         lvcatatan.setExpanded(true);
-        progressBar =  view.findViewById(R.id.progressBar);
-        tvProgressBar =  view.findViewById(R.id.tv_progress_bar);
     }
 
-    private void initData(){
+    private void initData() {
         int[] oke = {1, 2, 3, 4, 5, 1, 2, 3, 4, 5};
         for (int i = 0; i < 10; i++) {
             CatatanModel model = new CatatanModel();
@@ -81,19 +81,18 @@ public class HomeFragment extends Fragment {
             model.setKeterangan("Ini keterangan ~");
             listModel.add(model);
         }
-
-        lvcatatan.setAdapter(adapter);
-        sv.fullScroll(View.FOCUS_UP);
+        //adapter.notifyDataSetChanged();
     }
-    private void initClick(){
+
+    private void initClick() {
         lvcatatan.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 CatatanModel cm = listModel.get(position);
                 Intent i = new Intent(getActivity(), CatatanDetailActivity.class);
-                i.putExtra("i_title",cm.getNama());
-                i.putExtra("i_desc",cm.getKeterangan());
-                i.putExtra("i_price",cm.getBiaya());
+                i.putExtra("i_title", cm.getNama());
+                i.putExtra("i_desc", cm.getKeterangan());
+                i.putExtra("i_price", cm.getBiaya());
                 startActivity(i);
             }
         });

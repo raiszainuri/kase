@@ -24,4 +24,6 @@
     <string name="tx_keterangan">Keterangan</string>
     <string name="tx_filter_aktivitas">Filter Aktivitas</string>
     <string name="tx_daftar">Daftar</string>
+    <string name="tx_ubah">Ubah</string>
+    <string name="tx_pengaturan">Pengaturan</string>
 </resources>

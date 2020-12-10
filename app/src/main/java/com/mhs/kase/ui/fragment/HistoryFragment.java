@@ -47,13 +47,14 @@ public class HistoryFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_catatan, container, false);
 
         initView();
+
         adapter = new CatatanAdapter(getActivity(), listModel);
-        adapter.notifyDataSetChanged();
+        lvHistory.setAdapter(adapter);
+
         initData();
         initClick();
 
-        return
-                view;
+        return view;
     }
 
     private void showDialog() {
@@ -75,6 +76,7 @@ public class HistoryFragment extends Fragment {
         sv = (ScrollView) view.findViewById(R.id.sv);
         btnFilter = (LinearLayout) view.findViewById(R.id.btn_filter);
         lvHistory = (ExpandableHeightListView) view.findViewById(R.id.lv_history);
+
         lvHistory.setExpanded(true);
     }
 
@@ -88,9 +90,6 @@ public class HistoryFragment extends Fragment {
             model.setKeterangan("Ini keterangan ~");
             listModel.add(model);
         }
-
-        lvHistory.setAdapter(adapter);
-        sv.fullScroll(View.FOCUS_UP);
     }
 
     private void initClick() {
