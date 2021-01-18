@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/bgcolor"
     android:fitsSystemWindows="true"
-    tools:context=".ui.MainActivity"
+    tools:context=".view.MainActivity"
     tools:openDrawer="start">
 
     <RelativeLayout
@@ -27,17 +27,28 @@
                 android:layout_height="?attr/actionBarSize"
                 android:background="?attr/colorPrimary"
                 android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-                app:title="Kase"
-                android:gravity="center_horizontal"
                 app:contentInsetStartWithNavigation="0dp"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+                app:title=" ">
+                <!--app:title="Kase"-->
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/f_medium"
+                    android:text="@string/app_name"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+            </androidx.appcompat.widget.Toolbar>
+
         </com.google.android.material.appbar.AppBarLayout>
 
         <FrameLayout
             android:id="@+id/frame_fragment"
-            android:layout_above="@id/bottom_navigation"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_above="@id/bottom_navigation"
             android:layout_below="@id/appbar"
             app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
 
@@ -59,7 +70,6 @@
         android:fitsSystemWindows="false"
         app:headerLayout="@layout/layout_header_drawer"
         app:menu="@menu/navigation_view" />
-
 
 
 </androidx.drawerlayout.widget.DrawerLayout>

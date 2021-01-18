@@ -3,6 +3,9 @@
     xmlns:dist="http://schemas.android.com/apk/distribution"
     package="com.mhs.kase">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <dist:module dist:instant="true" />
 
     <application
@@ -12,22 +15,35 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.CatatanDetailActivity"></activity>
-        <activity android:name=".ui.TambahMemberActivity" />
-        <activity android:name=".ui.SettingActivity" />
-        <activity android:name=".ui.MemberDetailActivity" />
-        <activity android:name=".ui.LoginActivity" />
-        <activity android:name=".ui.RegisterActivity" />
-        <activity android:name=".ui.SplashScreenActivity">
+        <activity android:name=".view.tutorial.TabLayoutActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".view.CatatanDetailActivity" />
+        <activity android:name=".view.TambahMemberActivity" />
+        <activity android:name=".view.SettingActivity" />
+        <activity android:name=".view.MemberDetailActivity" />
+        <activity android:name=".view.LoginActivity" />
+        <activity android:name=".view.RegisterActivity" />
+        <activity android:name=".view.SplashScreenActivity">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
         <activity
-            android:name=".ui.MainActivity"
-            android:windowSoftInputMode="adjustPan" />
+            android:name=".view.MainActivity"
+            android:windowSoftInputMode="adjustPan" >
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
     </application>
 
 </manifest>

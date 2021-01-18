@@ -1,4 +1,4 @@
-package com.mhs.kase.ui;
+package com.mhs.kase.view;
 
 import android.os.Bundle;
 import android.view.View;
@@ -9,8 +9,11 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.mhs.kase.R;
+import com.mhs.kase.utils.KaseApi;
 
-public class RegisterActivity extends AppCompatActivity {
+import java.util.Map;
+
+public class RegisterActivity extends AppCompatActivity implements KaseApi {
 
     private EditText etNamaLengkap;
     private EditText etUsername;
@@ -73,5 +76,10 @@ public class RegisterActivity extends AppCompatActivity {
         if (etPassword.getText().toString().equalsIgnoreCase(etCPassword.getText().toString()))
             return true;
         else return false;
+    }
+
+    @Override
+    public void executeUrl(String url, Map<String, String> params) {
+
     }
 }

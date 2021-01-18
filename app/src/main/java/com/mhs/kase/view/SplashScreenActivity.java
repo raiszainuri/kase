@@ -1,4 +1,4 @@
-package com.mhs.kase.ui;
+package com.mhs.kase.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 

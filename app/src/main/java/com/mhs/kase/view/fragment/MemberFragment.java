@@ -1,4 +1,4 @@
-package com.mhs.kase.ui.fragment;
+package com.mhs.kase.view.fragment;
 
 
 import android.content.Context;
@@ -16,18 +16,19 @@ import androidx.fragment.app.Fragment;
 import com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView;
 import com.mhs.kase.R;
 import com.mhs.kase.adapter.MemberAdapter;
-import com.mhs.kase.model.CatatanModel;
 import com.mhs.kase.model.MemberModel;
-import com.mhs.kase.ui.MemberDetailActivity;
-import com.mhs.kase.ui.TambahMemberActivity;
+import com.mhs.kase.utils.KaseApi;
+import com.mhs.kase.view.MemberDetailActivity;
+import com.mhs.kase.view.TambahMemberActivity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MemberFragment extends Fragment {
+public class MemberFragment extends Fragment implements KaseApi {
 
 
     private View view;
@@ -101,5 +102,10 @@ public class MemberFragment extends Fragment {
             listMember.add(model);
         }
         //adapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void executeUrl(String url, Map<String, String> params) {
+
     }
 }

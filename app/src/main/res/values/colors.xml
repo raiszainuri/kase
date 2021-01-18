@@ -27,4 +27,8 @@
 
     <color name="gradient1">#2F248F</color>
     <color name="gradient2">#291E82</color>
+    <item name="color_type" type="color">
+        <color name="white1">#2F248F</color>
+        <color name="white2">#F50057</color>
+    </item>
 </resources>

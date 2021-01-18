@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bgcolor"
-    tools:context=".ui.fragment.HistoryFragment">
+    tools:context=".view.fragment.HistoryFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -42,6 +42,7 @@
                         android:textSize="16sp" />
 
                     <TextView
+                        android:id="@+id/tv_total"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/f_bold"
@@ -109,6 +110,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tv_title"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/f_semibold"
@@ -116,10 +118,11 @@
                             android:textColor="@color/t_dark" />
 
                         <TextView
+                            android:id="@+id/tv_subtitle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/f_regular"
-                            android:text="Cek lebih lengkap di halaman laporan"
+                            android:text="Ada 70% yang sudah bayar"
                             android:textColor="@color/t_grey"
                             android:textSize="13sp" />
                     </LinearLayout>

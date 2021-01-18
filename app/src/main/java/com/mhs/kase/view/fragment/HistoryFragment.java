@@ -1,4 +1,4 @@
-package com.mhs.kase.ui.fragment;
+package com.mhs.kase.view.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,16 +15,18 @@ import com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView;
 import com.mhs.kase.R;
 import com.mhs.kase.adapter.CatatanAdapter;
 import com.mhs.kase.model.CatatanModel;
-import com.mhs.kase.ui.CatatanDetailActivity;
+import com.mhs.kase.utils.KaseApi;
+import com.mhs.kase.view.CatatanDetailActivity;
 import com.orhanobut.dialogplus.DialogPlus;
 import com.orhanobut.dialogplus.OnItemClickListener;
 import com.orhanobut.dialogplus.ViewHolder;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 
-public class HistoryFragment extends Fragment {
+public class HistoryFragment extends Fragment implements KaseApi {
 
 
     private ScrollView sv;
@@ -111,5 +113,10 @@ public class HistoryFragment extends Fragment {
                 showDialog();
             }
         });
+    }
+
+    @Override
+    public void executeUrl(String url, Map<String, String> params) {
+
     }
 }

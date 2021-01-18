@@ -1,4 +1,4 @@
-package com.mhs.kase.ui.fragment;
+package com.mhs.kase.view.fragment;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,22 +7,26 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
+import com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView;
 import com.mhs.kase.R;
 import com.mhs.kase.adapter.CatatanAdapter;
 import com.mhs.kase.anim.ProgressBarAnimation;
 import com.mhs.kase.model.CatatanModel;
-import com.mhs.kase.ui.CatatanDetailActivity;
+import com.mhs.kase.utils.KaseApi;
+import com.mhs.kase.view.CatatanDetailActivity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements KaseApi {
 
     private Context ctx;
 
@@ -30,10 +34,14 @@ public class HomeFragment extends Fragment {
     private ScrollView sv;
     private ProgressBar progressBar;
     private TextView tvProgressBar;
-    private com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView lvcatatan;
+    private ExpandableHeightListView lvcatatan;
 
     private CatatanAdapter adapter;
     private List<CatatanModel> listModel = new ArrayList<>();
+    private TextView tvTotal;
+    private LinearLayout llClickLaporan;
+    private TextView tvTitle;
+    private TextView tvSubtitle;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -69,6 +77,10 @@ public class HomeFragment extends Fragment {
         tvProgressBar = view.findViewById(R.id.tv_progress_bar);
 
         lvcatatan.setExpanded(true);
+        tvTotal = view.findViewById(R.id.tv_total);
+        llClickLaporan = view.findViewById(R.id.ll_click_laporan);
+        tvTitle = view.findViewById(R.id.tv_title);
+        tvSubtitle = view.findViewById(R.id.tv_subtitle);
     }
 
     private void initData() {
@@ -82,6 +94,53 @@ public class HomeFragment extends Fragment {
             listModel.add(model);
         }
         //adapter.notifyDataSetChanged();
+        lakukan ll = new lakukan();
+        //ll.lakukanlagi();
+    }
+
+    @Override
+    public void executeUrl(String url, Map<String, String> params) {
+
+    }
+
+    public class lakukan {
+        /*public void lakukanlagi() {
+            int[] oke = {1, 2, 3, 4, 5, 1, 2, 3, 4, 5};
+            try {
+                JSONArray jArray = apiUrl.executeUrl("");
+                JSONObject obj;
+                for (int i = 0; i < 10; i++) {
+                    obj = jArray.getJSONObject(i);
+                    CatatanModel model = new CatatanModel();
+                    model.setIdcolor(oke[i]);
+                    model.setBiaya(obj.getInt(""));
+                    model.setNama(obj.getString(""));
+                    model.setKeterangan(obj.getString(""));
+                    listModel.add(model);
+                }
+            } catch (Exception ex) {
+
+            }
+        }*/
+    }
+
+    private void retrieveData() {
+        /*int[] oke = {1, 2, 3, 4, 5, 1, 2, 3, 4, 5};
+        try {
+            JSONArray jArray = apiUrl.executeUrl("");
+            JSONObject obj;
+            for (int i = 0; i < 10; i++) {
+                obj = jArray.getJSONObject(i);
+                CatatanModel model = new CatatanModel();
+                model.setIdcolor(oke[i]);
+                model.setBiaya(obj.getInt(""));
+                model.setNama(obj.getString(""));
+                model.setKeterangan(obj.getString(""));
+                listModel.add(model);
+            }
+        } catch (Exception ex) {
+
+        }*/
     }
 
     private void initClick() {
